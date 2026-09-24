@@ -1,6 +1,6 @@
 ai-models
 ai-models-fourcastnetv2-gfs
-python-eccodes
+eccodes
 xarray
 cfgrib
 matplotlib
