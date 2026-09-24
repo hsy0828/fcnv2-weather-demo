@@ -62,6 +62,8 @@ def plot_temperature_and_wind():
     ax.gridlines(draw_labels=True, dms=True, x_inline=False, y_inline=False, alpha=0.3)
 
     plt.title("FCNV2 全球預測：2公尺氣溫 (°C) 與 10公尺風場向量", fontsize=15, pad=12)
+
+    ax.set_extent([115, 126, 20, 27], crs=ccrs.PlateCarree())  # [西經, 東經, 南緯, 北緯]
     
     # 7. 儲存圖片
     output_png = "forecast_temp_wind.png"
