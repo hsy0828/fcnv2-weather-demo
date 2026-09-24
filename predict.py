@@ -6,13 +6,15 @@ def main():
     
     # 1. 執行預測
     cmd = [
-        "ai-models",
-        "--input", "gfs",
-        "--date", "20240101",
-        "--time", "0000",
-        "--lead-time", "24",
-        "fourcastnetv2-small"
-    ]
+    "ai-models",
+    "--input",
+    "ecmwf-open-data",  # <--- 修改為有效的輸入來源
+    "--date",
+    "20240101",
+    "--time", "0000",
+    "--lead-time", "6/to/24/by/6",
+    "fourcastnetv2-small",
+]
     
     try:
         print("正在下載資料與權重，並執行預測中...")
