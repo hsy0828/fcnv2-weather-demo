@@ -5,16 +5,25 @@ def main():
     print("=== 開始執行 FCNV2 氣象預測流程 ===")
     
     # 1. 執行預測
-    cmd = [
+   # 設定你想預測的總小時數與間隔
+max_hours = 72  # 未來想改 24、72、120 直接改這個數字
+step_hours = 6
+
+cmd = [
     "ai-models",
     "--input",
-    "ecmwf-open-data",  # <--- 修改為有效的輸入來源
+    "ecmwf-open-data",
     "--date",
     "20240101",
-    "--time", "0000",
-    "--lead-time", "6/to/24/by/6",
-    "fourcastnetv2-small",
+    "--time",
+    "0000",
 ]
+
+# 自動產生: --lead-time 6 --lead-time 12 ... 直到 --lead-time 72
+for lead_time in range(step_hours, max_hours + 1, step_hours):
+    cmd.extend(["--lead-time", str(lead_time)])
+
+cmd.append("fourcastnetv2-small")
     
     try:
         print("正在下載資料與權重，並執行預測中...")
