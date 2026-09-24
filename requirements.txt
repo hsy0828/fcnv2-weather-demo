@@ -1,3 +1,7 @@
 ai-models
 ai-models-fourcastnetv2-gfs
 python-eccodes
+xarray
+cfgrib
+matplotlib
+cartopy
