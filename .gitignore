@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# 氣象與 AI 權重大檔案過濾
+*.grib
+*.grib2
+*.nc
+*.ckpt
+*.pth
+.cache/
