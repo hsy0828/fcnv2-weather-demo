@@ -1,6 +1,7 @@
-ai-models
+earthkit
+ai-models>=0.6.0
+ai-models-fourcastnetv2
 ai-models-fourcastnetv2-gfs
-earthkit-data<=0.5.1
 eccodes
 xarray
 cfgrib
