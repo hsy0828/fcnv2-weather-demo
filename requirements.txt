@@ -1,6 +1,6 @@
-earthkit-data
+earthkit-data==0.9.1
 earthkit-meteo
-ai-models>=0.10.0
+ai-models>=0.7.0
 ai-models-fourcastnetv2-gfs
 eccodes
 xarray
