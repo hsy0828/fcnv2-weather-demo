@@ -1,5 +1,6 @@
 ai-models
 ai-models-fourcastnetv2-gfs
+earthkit-data<=0.5.1
 eccodes
 xarray
 cfgrib
