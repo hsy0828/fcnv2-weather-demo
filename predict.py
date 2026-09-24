@@ -1,10 +1,10 @@
-import os
 import subprocess
+import os
 
 def main():
     print("=== 開始執行 FCNV2 氣象預測流程 ===")
     
-    # 執行 ai-models 進行預測（此步驟會自動下載模型權重與氣象資料）
+    # 1. 執行預測
     cmd = [
         "ai-models",
         "--input", "gfs",
@@ -18,6 +18,11 @@ def main():
         print("正在下載資料與權重，並執行預測中...")
         subprocess.run(cmd, check=True)
         print("預測完成！結果已儲存至 fourcastnetv2-small.grib")
+        
+        # 2. 自動執行繪圖腳本
+        print("開始執行自動繪圖...")
+        subprocess.run(["python", "plot_result.py"], check=True)
+        
     except Exception as e:
         print(f"執行失敗，錯誤訊息：{e}")
 
