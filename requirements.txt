@@ -1,5 +1,6 @@
 numpy>=1.26.0
-earthkit
+earthkit-data
+earthkit-meteo
 ai-models>=0.6.0
 ai-models-fourcastnetv2-gfs
 eccodes
