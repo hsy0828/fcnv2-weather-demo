@@ -1,6 +1,6 @@
+numpy>=1.26.0
 earthkit
 ai-models>=0.6.0
-ai-models-fourcastnetv2
 ai-models-fourcastnetv2-gfs
 eccodes
 xarray
