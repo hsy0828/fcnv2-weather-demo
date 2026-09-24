@@ -1,4 +1,4 @@
-earthkit-data==0.9.1
+earthkit-data==0.9.4
 earthkit-meteo
 ai-models>=0.7.0
 ai-models-fourcastnetv2-gfs
